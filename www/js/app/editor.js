@@ -2,9 +2,10 @@ define([
 	"jquery",
 	"app/Site",
 	"app/Control/SidebarControl",
-	"app/Control/ProxyControl"
+	"app/Control/ProxyControl",
+	"app/Control/ColumnDragControl",
 
-], function($, Site, SidebarControl, ProxyControl) {
+], function($, Site, SidebarControl, ProxyControl, ColumnDragControl) {
 
 	var Editor = {
 
@@ -22,12 +23,13 @@ define([
 			
 			$dragHighlight = iframeWindow.$('#drop-highlight');
 			widgetDragElId = '#move-drag',
-			columnDragElId = '#column-drag',
+			columnDragElId = '#column-drag-container',
 			
 			droppableArr = Site.load(iframe, widgetDragElId, columnDragElId);
 
 			SidebarControl.load(iframe, droppableArr, $dragHighlight);
 			ProxyControl.load(iframe, droppableArr, $dragHighlight);
+			ColumnDragControl.load(iframe);
 
 			$('#column-drag').on('mouseover', function (e) {
 				e.preventDefault();

@@ -11,6 +11,9 @@ define([
 			// When you click them...
 			frame.contentWindow.$(el).on('mousedown', function () {
 
+				// Add widget-selected class on the body
+				$(document.body).addClass('widget-selected');
+
 				WidgetMoveBehaviour.load(this, frame, widgetDragElId)
 			
 			});

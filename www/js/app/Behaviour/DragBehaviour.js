@@ -43,6 +43,7 @@ define([
 						// Set the 
 						classie.add( iframeBody, 'drag-active' );
 						classie.add( document.body, 'drag-active' );
+						classie.add( document.body, 'widget-drag-active' );
 
 						// Slight delay to ensure a position of the drag is calculated
 						setTimeout(function () {
@@ -136,6 +137,8 @@ define([
 						if( !wasDropped ) {
 							classie.remove( iframeBody, 'drag-active' );
 							classie.remove( document.body, 'drag-active' );
+							classie.remove( document.body, 'widget-selected' );
+							classie.remove( document.body, 'widget-drag-active' );
 						}
 						else {
 							// after some time hide drop area and 
@@ -146,6 +149,8 @@ define([
 								// remove class 'drag-active' from body
 								classie.remove( iframeBody, 'drag-active' );
 								classie.remove( document.body, 'drag-active' );
+								classie.remove( document.body, 'widget-selected' );
+								classie.remove( document.body, 'widget-drag-active' );
 							}, 500 );
 						}
 

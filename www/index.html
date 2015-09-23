@@ -28,7 +28,7 @@
 		</div>
         
         <div id="move-drag" class="draggable site-drag" style="display:none;position:absolute;top:0;left:0;padding-bottom:inherit;width:100px;height:100px;"><div class="widget"></div></div>
-        <div id="column-drag" class="draggable column-drag"></div>
+        <div id="column-drag-container"><div id="column-drag" class="draggable column-drag"><span></span></div></div>
 
         <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 			<a id="add-button" class="btn-floating btn-large waves-effect waves-light red  modal-trigger">
@@ -38,8 +38,7 @@
 
 		<!-- Modal Structure -->
 
-
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.js"></script>
       	<script src="js/materialize.min.js"></script>
 
         <script data-main="js/app" src="js/lib/require.js"></script>
