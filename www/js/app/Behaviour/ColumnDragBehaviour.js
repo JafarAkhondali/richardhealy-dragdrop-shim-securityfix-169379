@@ -127,6 +127,9 @@ define([
 			classie.remove( iframeBody, 'drag-active' );
 			classie.remove( document.body, 'drag-active' );
 			classie.remove( document.body, 'column-drag-active' );
+
+			// Make all the column drops resize into position
+			window.dispatchEvent(new Event('resize'));
 		}
 	};
 

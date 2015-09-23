@@ -41,10 +41,6 @@ define([
 			$el.on('mouseover', function () {
 				self.showResizeIndicator(el, iframe, side);
 			});
-
-			//$el.on('mouseout', function () {
-			//	self.hideResizeIndicator(el);
-			//});
 		},
 
 		showResizeIndicator: function (el, iframe, side) {
@@ -140,20 +136,6 @@ define([
 				'left': initialHandlePosition + 'px',
 				'top': ''
 			});
-		},
-
-		hideResizeIndicator: function () {
-			var $columnDragContainer = $('#column-drag-container');
-
-			// This element lives in the Editor HTML
-			$columnDragContainer.css({
-				'display':'none',
-				'height': '0px',
-				'width':'0px',
-				'top': '0px',
-				'left': '0px'
-			});
-
 		},
 
 		createDropEl: function () {
