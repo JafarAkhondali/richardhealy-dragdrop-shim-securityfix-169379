@@ -13,7 +13,6 @@ define([
 	    	$('.column-drag').each(function () {
 				drag = ColumnDrag.load(this, iframe);
 			});
-	    	console.log(drag);
 		}
 	};
 

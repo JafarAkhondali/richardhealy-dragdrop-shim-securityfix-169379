@@ -53,7 +53,7 @@ define([
 				this.$rightColumn = this.$selectedColumnSibling;
 			}
 
-			this.previousPositionX = pointer.x;
+			this.previousPositionX = pointer.clientX;
 
 			// The iframe always interferes with the drag event;
 			// giving it a really bad drag experience where the 
@@ -84,12 +84,12 @@ define([
 				this.$selectedColumnSibling.removeClass(sizeClasses);
 
 				// Change the column classes
-				if (this.previousPositionX < pointer.x) {
+				if (this.previousPositionX < pointer.clientX) {
 					
 					leftColumnSize = Math.min(parseInt(this.$leftColumn.attr('data-size'), 10) + difference, 12);
 					rightColumnSize = Math.max(parseInt(this.$rightColumn.attr('data-size'), 10) - difference, 1);
 
-				} else if (this.previousPositionX >	pointer.x) {
+				} else if (this.previousPositionX >	pointer.clientX) {
 
 					leftColumnSize = Math.max(parseInt(this.$leftColumn.attr('data-size'), 10) - difference, 1);
 					rightColumnSize = Math.min(parseInt(this.$rightColumn.attr('data-size'), 10) + difference, 12);
@@ -101,7 +101,7 @@ define([
 				this.$rightColumn.attr('data-size', rightColumnSize);
 
 				this.previousGridPosition = this.drag.dragPoint.x;
-				this.previousPositionX = pointer.x;
+				this.previousPositionX = pointer.clientX;
 			}
 		},
 		onEnd : function (iframe) {
