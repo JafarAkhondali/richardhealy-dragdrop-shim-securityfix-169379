@@ -9,6 +9,10 @@
 	height:500px
 }
 
+.droppable.medium {
+	height:300px
+}
+
 .droppable.small {
 	height:100px
 }
@@ -30,6 +34,56 @@
 .column-drop.highlight.drop-right {
 	background-color: transparent;
 }
+
+.hero {
+	background-image: url('../img/hero.png');
+	background-position: center center;
+	background-size: 960px 500px; 
+}
+
+.side1 {
+	background-image: url('../img/side1.jpg');
+	background-position: center center;
+	background-size: 460px 300px; 
+}
+
+.text1 {
+	background-image: url('../img/text1.jpg');
+	background-position: center center;
+	background-size: 460px 100px; 
+}
+
+.text2 {
+	background-image: url('../img/text2.jpg');
+	background-position: center center;
+	background-size: 460px 100px; 
+}
+
+.sideimage1 {
+	background-image: url('../img/side-image-1.jpg');
+	background-position: center center;
+	background-size: 460px 100px; 
+}
+
+.sideimage2 {
+	background-image: url('../img/side-image-2.jpg');
+	background-position: center center;
+	background-size: 460px 100px; 
+}
+
+.table1 {
+	background-image: url('../img/table1.jpg');
+	background-position: center center;
+	background-size: 460px 300px; 
+}
+
+.divide1 {
+	background-image: url('../img/long1.jpg');
+	background-position: center center;
+	background-size: 960px 100px; 
+}
+
+
 @media only screen and (max-width:40em) { 
 	.row .col.s4,
 	.row .col.s3,

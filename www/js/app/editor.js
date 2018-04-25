@@ -1,7 +1,7 @@
 define([
 	"jquery",
 	"app/Site",
-	"app/Control/SidebarControl",
+	"app/Control/SideBarControl",
 	"app/Control/ProxyControl"
 
 ], function($, Site, SidebarControl, ProxyControl) {
